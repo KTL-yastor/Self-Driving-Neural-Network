@@ -11,7 +11,7 @@ const ship = new Ship(800, space.getLaneCenter(1), 50, 30);
 animate();
 
 function animate(){
-    ship.update();
+    ship.update(space.borders);
     canvas.width = window.innerWidth;
 
     ctx.save();
