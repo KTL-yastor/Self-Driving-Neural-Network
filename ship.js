@@ -12,12 +12,15 @@ class Ship{
         //do skręcania
         this.angle = 0;
 
+        this.sensor = new Sensor(this);
+
         this.controls = new Controls();
     }
     // przyspieszenie i spowalnianie po puszczeniu klawisza
     update(){
 
         this.#move();   
+        this.sensor.update();
     }
 
     #move(){
@@ -78,5 +81,7 @@ class Ship{
         );
         ctx.fill();
         ctx.restore();
+
+        this.sensor.draw(ctx);
     }
 }

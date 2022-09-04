@@ -6,7 +6,7 @@ canvas.height = 300;
 const ctx = canvas.getContext("2d");
 const space = new Space(canvas.height/2, canvas.height);
 const ship = new Ship(800, space.getLaneCenter(1), 50, 30);
-ship.draw(ctx);
+
 
 animate();
 
